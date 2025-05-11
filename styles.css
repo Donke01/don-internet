@@ -18,13 +18,14 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #007bff;
+    background-color: #003087;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -34,7 +35,14 @@ header .container {
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo .tagline {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
 }
 
 nav ul {
@@ -43,69 +51,100 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #ff8c00;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), url('https://via.placeholder.com/1200x600') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 48, 135, 0.7), rgba(0, 48, 135, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
     color: #fff;
-    padding-top: 80px;
+    padding-top: 100px;
+}
+
+.hero blockquote {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #007bff;
+    padding: 12px 30px;
+    background-color: #ff8c00;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
+    background-color: #e07b00;
 }
 
 /* Section Styles */
 .section {
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #003087;
 }
 
 .section p {
-    font-size: 18px;
+    font-size: 20px;
     max-width: 800px;
-    margin: 0 auto 20px;
+    margin: 0 auto 25px;
+}
+
+.section-img {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Impact Section */
+.impact {
+    background-color: #f0f4ff;
 }
 
 /* Services Grid */
@@ -113,24 +152,117 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .service-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
     width: 45%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .service-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #003087;
 }
 
 .service-card p {
+    font-size: 18px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003087;
+}
+
+.team-member p {
     font-size: 16px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #fff9f0;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial p:last-child {
+    font-style: normal;
+    font-weight: bold;
+    color: #003087;
 }
 
 /* Contact Form */
@@ -141,19 +273,21 @@ nav ul li a:hover {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-group label {
     display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #003087;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -167,13 +301,24 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #003087;
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
 footer p {
-    font-size: 14px;
-    margin: 5px 0;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.social-links a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }
